@@ -1,0 +1,242 @@
+/* Tipografia */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* Tamaños de pantallas */
+@import url('monitor.css') screen and (min-width:1200px);
+@import url('note.css') screen and (min-width:1024px) and (max-width:1199px);
+@import url('tablet.css') screen and (min-width:768px) and (max-width:1023px);
+@import url('movil.css') screen and (min-width:320px) and (max-width:767px);
+
+/* General */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #080808;
+  font-family: Bebas Neue;
+  color: white;
+}
+img, figure, iframe{
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+/* Header */
+.header {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1.5rem);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  min-height: 4rem;
+  padding-block: .4em;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 3;
+}
+
+#nav__checkbox {
+  display: none;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 100%;
+  height: 4em;
+  margin-top: 3em;
+}
+
+footer article p{
+  margin: 1em;
+}
+
+/* Inicio */
+#parrafo {
+  font-family: Poppins;
+  font-size: 19px;
+}
+
+/* Titulos */
+
+.titulo {
+  font-size: 4em;
+  text-align: center;
+  margin-bottom: 1.25em;
+}
+
+.subtitulo {
+  font-size: 2.25em;
+}
+
+figcaption {
+  background-color: red;
+}
+
+/* Personajes */
+#personajes {
+  margin-top: 3em;
+}
+.personajes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.personajes li {
+  margin: .25em;
+  text-align: center;
+} 
+
+/* Temporadas */
+#temporadas {
+  margin-block: 3em;
+}
+.stage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin: auto;
+}
+.temp_box{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  position: relative;
+}
+.temp_box figure {
+  background-color: bisque;
+  width: 12.5rem;
+  height: 18.75rem;
+}
+.temp_box figure img{
+  overflow: hidden;
+  height: 100%;
+}
+.temp_box button {
+  font-family: Bebas Neue;
+  font-size: 1em;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: red;
+  text-align: center;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+.info-capitulos {
+  display: none;
+  position: absolute;
+  background-color: red;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 2em;
+  margin: 1em;
+  border-radius: .1em;
+}
+.temp_box button:active ~ .info-capitulos {
+  display: block;
+}
+
+/* Coches */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4em;
+  margin: auto;
+}
+.carro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: self-start;
+  flex-direction: row;
+  margin-bottom: 2em;
+}
+
+.carro h3{
+  font-family: Bebas Neue;
+  font-size: 3em;
+  border: none;
+  color: white;
+  background-color: red;
+  text-align: center;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+.carro figure img{
+  overflow: hidden;
+  width: 100%;
+  object-position: bottom;
+}
+
+.auto-list li{
+  line-height: 2em;
+  font-size: 1.5em;
+  margin-left: 1em;
+}
+
+/* Formulario */
+fieldset {
+  border: none;
+  width: 100%;
+}
+legend {
+  font-size: 1.6em;
+  text-align: center;
+}
+.caja-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em;
+}
+.caja-form label {
+  font-size: 1.5em;
+}
+.caja-form input , textarea{
+  width: 100%;
+  padding: 1em;
+  flex-grow: 1;
+  font-family: Bebas neue;
+  font-size: 1em;
+}
+textarea {
+  height: 100px;
+  resize: none;
+}
+.btn-submit{
+  display: flex;
+  justify-content: center;
+}
+.btn-submit input{
+  font-family: Bebas Neue;
+  font-size: 2em;
+  border: none;
+  color: white;
+  background-color: red;
+  text-align: center;
+  cursor: pointer;
+}
