@@ -26,4 +26,4 @@ El proyecto fue desarrollado utilizando las siguientes herramientas:
 
 ## Contacto
 
-Para preguntas o problemas relacionados con el proyecto, [contactame](mailto:lucasn.panadero@gmail.com).
+Para preguntas o problemas relacionados con el proyecto [contactame](mailto:lucasn.panadero@gmail.com).
