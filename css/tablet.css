@@ -1,115 +1,284 @@
 /* Base */
-.header {
+header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.header h1 {
-  display: flex;
-  justify-content: center;
-  margin-inline: 2em;
-}
-.header h1 a {
-  max-width: 4em;
-}
-.hamburguesa {
-  max-width: 3rem;
-  margin-inline: 2em;
-}
-.hamburguesa:active {
-  background-color: rgba(225, 255, 255, .1);
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-}
-.header nav {
-  align-items: center;
-  margin: auto;
-}
-.nav{
-  display: none;
-}
-.nav__links{
-  display: flex;
-  min-height: 50%;
-  padding-block: 2rem;
-  justify-content: space-around;
   flex-direction: column;
-  align-items: center;
-  transition: transform;
-}
-.nav__links li {
-  text-align: center;
-  font-size: 2em;
-}
-.header li a {
-  display: block;
-  padding: 1rem;
-  margin-inline: .5rem;
-}
-.header li a:active {
-  background-color: rgba(225, 255, 255, .1);
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-}
-#nav__checkbox:checked ~ .nav {
-  display: block;
-  z-index: 1;
-  height: 100vh;
-}
-#nav__checkbox:checked ~ .hamburguesa img{
-  position: absolute;
-  left: 0;
-  top: 0;
-  min-height: 100vh;
-  width: 100%;
-  height: 100%;
-  filter: opacity(0);
-}
-#nav__checkbox:checked ~ h1 {
-  margin-top: 2em;
-  flex-basis: 100%;
-  justify-content: center;
-  width: 100%;
+  align-items: center; 
+  margin: 20px;
 }
 
-/* Iframe */
-.iframe-back{
+#drop {
+  display: flex;
+}
+
+
+#drop-menu {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+#drop-menu li {
+  margin: 35px;
+  font-size: 20px;
+}
+
+footer {
+  margin: 20px;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 100%;
+}
+
+footer article p {
+  display: inline;
+  justify-content: space-around;
+}
+
+button {
   display: none;
 }
+
+iframe {
+  display: none;
+}
+
 /* Inicio */
-#inicio{
-  margin-top: 5rem;
+#img-tablet {
+  background-image: url(../img/hero.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
+
+#opacidad {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#inicio {
+  width: 90%;
+  margin: auto;
+}
+
 #inicio figure img {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  filter: opacity(.2);
+  display: none;
 }
+
 #inicio article {
   font-size: 25px;
-  width: 90%;
+  width: 80%;
   margin: auto;
   word-spacing: 2px;
 }
 
 /* Temporadas */
-.temp_box {
-  max-width: max-content;
-  align-items:flex-start;
+#temp-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-/* Autos */
-.carro {
-  max-width: max-content;
+.tarjeta-temp {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
 }
-.carro figure {
+
+.tarjeta-temp figure img {
+  height: 350px;
+  width: 250px;
+}
+
+.tarjeta-temp div {
+  padding: 0 20px ;
+}
+
+.tarjeta-temp div ul {
+  padding-top: 20px;
+}
+
+.tarjeta-temp div ul li{
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+
+.info {
+  position: relative;
+}
+
+.info-capitulos {
+  display: none;
+  position: absolute;
+  background-color: #080808;
+  top: 0;
+  left: 5%;
   width: 100%;
+  z-index: 1;
+}
+
+.info:hover .info-capitulos {
+  display: block;
+}
+
+
+/* Personajes */
+#personajes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#personajes li {
+  margin: 4px;
+  text-align: center;
+} 
+
+/* Coches */
+.auto-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.auto-container article {
+  width: 360px;
+  z-index: 2;
+}
+
+.auto-container article h2{
+  padding: 40px;
+  text-align: center;
+}
+
+.auto-container figure {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+.auto-container figure img{
+  height: 380px;
+}
+
+.auto-list {
+  padding-top: 220px;
+}
+
+.auto-list li{
+  font-size: 30px;
+  padding-bottom: 20px;
 }
 
 /* Formulario */
-#form{
-  width: 95%;
+#licencia {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
   margin: auto;
 }
-.btn-submit input{
-  width: 96%;
+
+.caja-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#nombre, #domicilio, #fechaNacimiento, #marca, #modelo, #anio, #sexo, #nlicencia{
+  height: 50px;
+}
+
+.radio {
+  display: inline-block;
+  margin-right: 2%;
+  font-size: 30px;
+}
+
+.fila {
+  display:flex;
+}
+
+#btn-submit {
+  margin: 30px 0;
+}
+
+#btn-submit input{
+  border: none;
+  padding: 20px 40px;
+  color: white;
+  font-family: Bebas Neue;
+  font-size: 30px;
+}
+
+#btn-submit input:hover{
+  color: black;
+  background-color: white;
+}
+
+.filaA {
+  width: 50%;
+}
+
+.filaB {
+  width: 30%;
+}
+
+.filaC {
+  width: 20%;
+}
+/* Licencia - Tarjeta */
+#tarjeta {
+  background-color: white;
+  color: black;
+  font-family: poppins;
+  width: 582px;
+  height: 336px;
+  margin: auto;
+  border-radius: 17px;
+  position: relative;
+}
+#tarjeta ul{
+  position: absolute;
+  bottom: 30%;
+  left: 7%;
+}
+#img-carnet {
+  position: absolute;
+  right: 2%;
+  top: 25%;
+}
+
+#firma-carnet {
+  position: absolute;
+  right: 45%;
+  bottom: 10%;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  top: 5%;
+  left: 5%;
+  position: absolute;
+}
+tr {
+  display: flex;
+  flex-direction: column;
+}
+
+td, th {
+  padding: 7px 0;
+  text-align: initial;
+}
+
+td {
+  width: 225px;
+  padding-left: 5px;
+}
+
+#clase {
+  text-align: center;
+  font-size: 30px;
 }

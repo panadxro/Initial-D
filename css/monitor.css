@@ -1,85 +1,280 @@
-/* Header */
-.header {
+/* Base */
+header {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+#drop {
+  display: flex;
+}
+
+#drop-menu {
+  display: flex;
+  align-items: center; 
+}
+
+#drop-menu li {
+  margin-left: 35px;
+  font-size: 20px;
+}
+
+footer {
+  margin: 20px;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 100%;
+}
+
+footer article p {
+  display: inline;
   justify-content: space-around;
 }
-.header ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.header li a {
-  font-size: 1.2em;
-  padding: .5rem 1rem;
-  margin-inline: .5rem;
-}
-.header li a:hover {
-  background-color: rgba(225, 255, 255, .1);
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-}
-.hamburguesa {
+
+#drop-btn {
   display: none;
 }
 
-/* Iframe */
-.iframe-back{
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-}
-#video {
-  min-height: 100vh;
-  width: 100%;
-  z-index: -1;
-  position: sticky;
-  top: 0;
-  left: 0;
+main {
+  width: 90%;
+  margin-inline: auto;
 }
 
 /* Inicio */
 #inicio {
   display: flex;
-  justify-content: space-evenly;
-  height: 100vh;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: relative;
+  justify-content: center;
 }
-#inicio figure {
-  background-color: blanchedalmond;
-  height: 500px;
-  max-width: 300px;
-}
+
 #inicio figure img {
-  width: 100%;
+  height: 950px;
+  left: 0;
 }
 
 #inicio article {
   font-size: 25px;
-  width: 50%;
+  width: 40%;
+  padding-left: 5%;
+}
+
+/* Iframe */
+#video-caja {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+#video {
+  width: 100%;
+  height: 100%;
+}
+
+#background {
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Temporadas */
-.temp_box {
-  max-width: min-content;
-  align-items:flex-end;
+#temp-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-/* Autos */
-.carro {
-  max-width: min-content;
+.tarjeta-temp {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
 }
-.carro figure {
-  width: 400px;
+
+.tarjeta-temp figure img {
+  height: 350px;
+  width: 250px;
+}
+
+.tarjeta-temp div {
+  padding: 0 20px ;
+}
+
+.tarjeta-temp div ul {
+  padding-top: 10px;
+}
+
+.tarjeta-temp div ul li{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.info {
+  position: relative;
+}
+
+.info-capitulos {
+  display: none;
+  position: absolute;
+  background-color: #080808;
+  top: 0;
+  left: 5%;
+  width: 100%;
+  z-index: 1;
+}
+
+.info:hover .info-capitulos {
+  display: block;
+}
+
+/* Personajes */
+
+#personajes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#personajes li {
+  margin: 4px;
+  text-align: center;
+} 
+
+/* Coches */
+.auto-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:center;
+}
+
+.auto-container article {
+  width: 360px;
+  margin-left: 5%;
+}
+
+.auto-container figure img{
+  height: 380px;
+}
+
+.auto-list {
+  padding-top: 20px;
+}
+
+.auto-list li{
+  font-size: 30px;
+  padding-bottom: 20px;
 }
 
 /* Formulario */
-#form{
+#licencia {
+  display: flex;
+  flex-direction: column;
   width: 80%;
   margin: auto;
 }
-.btn-submit input{
+
+.caja-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#nombre, #domicilio, #fechaNacimiento, #marca, #modelo, #anio, #sexo, #nlicencia{
+  height: 50px;
+  display: block;
+}
+
+.radio {
+  display: inline-block;
+  margin-right: 2%;
+  font-size: 30px;
+}
+
+.fila {
+  display:flex;
+}
+
+#btn-submit {
+  margin: 30px 0;
+}
+
+#btn-submit input{
+  border: none;
+  padding: 20px 40px;
+  color: white;
+  font-family: Bebas Neue;
+  font-size: 30px;
+}
+
+#btn-submit input:hover{
+  color: black;
+  background-color: white;
+}
+
+.filaA {
+  width: 50%;
+}
+
+.filaB {
+  width: 30%;
+}
+
+.filaC {
   width: 20%;
+}
+/* Licencia - Tarjeta */
+#tarjeta {
+  background-color: white;
+  color: black;
+  font-family: poppins;
+  width: 582px;
+  height: 336px;
+  margin: auto;
+  border-radius: 17px;
+  position: relative;
+}
+#tarjeta ul{
+  position: absolute;
+  bottom: 30%;
+  left: 7%;
+}
+#img-carnet {
+  position: absolute;
+  right: 2%;
+  top: 25%;
+}
+
+#firma-carnet {
+  position: absolute;
+  right: 45%;
+  bottom: 10%;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  top: 5%;
+  left: 5%;
+  position: absolute;
+}
+tr {
+  display: flex;
+  flex-direction: column;
+}
+
+td, th {
+  padding: 7px 0;
+  text-align: initial;
+}
+
+td {
+  width: 225px;
+  padding-left: 5px;
+}
+
+#clase {
+  text-align: center;
+  font-size: 30px;
 }
