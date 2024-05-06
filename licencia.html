@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obten tu licencia</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="shortcut icon" href="img/logo-initial.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1><a href="index.html"><img height="35px" src="img/Initial-D-logo-white.png" alt="Initial-D"></a></h1>
+    <nav id="drop">
+      <button id="drop-btn">☰</button>
+      <ul id="drop-menu">
+        <li><a href="temporadas.html">Temporadas</a></li>
+        <li><a href="personajes.html">Personajes</a></li>
+        <li><a href="autos.html">Autos</a></li>
+        <li><a href="licencia.html">Licencia</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2 class="titulo">Obten tu licencia de conducir</h2>
+      <form id="licencia" action="carnet.php" method="get">
+        <fieldset id="conductor">
+          <legend>Datos del conductor</legend>
+          <div class="caja-form">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="fila">
+            <div class="caja-form filaA">
+              <label for="domicilio">Domicilio</label>
+              <input type="text" id="domicilio" name="domicilio" required>
+            </div>
+            <div class="caja-form filaB">
+              <label for="fechaNacimiento">Fecha de nacimiento</label>
+              <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+            <div class="caja-form filaC">
+              <label for="sexo">Sexo</label>
+              <select name="sexo" id="sexo">
+                <option value="">Selecciona:</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+                <option value="X">No-Binario</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Datos del automovil</legend>
+          <div class="fila">
+            <div class="caja-form filaC">
+              <label for="marca">Marca</label>
+              <select name="marca" id="marca">
+                <option value="">Selecciona:</option>
+                <option value="Mercedez-Benz">Mercedez-Benz</option>
+                <option value="BMW">BMW</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Honda">Honda</option>
+                <option value="Ford">Ford</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Kia">Kia</option>
+                <option value="Fiat">Fiat</option>
+                <option value="Subaru">Subaru</option>
+                <option value="Mazda">Mazda</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Audi">Audi</option>
+              </select>
+            </div>
+            <div class="caja-form filaA">
+              <label for="modelo">Modelo</label>
+              <input type="text" id="modelo" name="modelo" required>
+            </div>
+            <div class="caja-form filaB">
+              <label for="anio">Año</label>
+              <input type="number" id="anio" name="anio" required>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Clase de licencia</legend>
+          <div class="caja-form">
+            <label for="nlicencia">Nº Licencia</label>
+            <input type="number" id="nlicencia" name="nlicencia" required>
+          </div>
+          <div class="radio">
+            <input type="radio" id="A" name="clase" value="A">
+            <label for="A">A</label>
+          </div>
+          <div class="radio">
+            <input type="radio" id="B" name="clase" value="B">
+            <label for="B">B</label>
+          </div>
+          <div class="radio">
+            <input type="radio" id="C" name="clase" value="C">
+            <label for="C">C</label>
+          </div>
+        </fieldset>
+        <div id="btn-submit">
+          <input type="submit">
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <h3><a href="index.html"><img height="35px" src="img/Initial-D-logo-white.png" alt="Initial-D"></a></h3>
+    <article>
+      <p>Shuichi Shigeno &copy; 1998</p>
+    </article>
+  </footer>
+</body>
+</html>
